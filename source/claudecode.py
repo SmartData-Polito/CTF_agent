@@ -77,7 +77,7 @@ def claudecode_agent(folder, results_root="experiment/results", model="claude-op
 
     cmd = [
         "claude", "-p", prompt,
-        "--allowedTools", "Bash,Write,Read,Edit",
+        "--disallowedTools", "WebFetch,WebSearch",
         "--output-format", "stream-json",
         "--verbose",
         "--dangerously-skip-permissions",
